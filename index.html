@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Join Roblox Server</title>
+</head>
+<body>
+    <script>
+        // Get query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const placeId = urlParams.get('placeId');
+        const jobId = urlParams.get('gameInstanceId');
+
+        // Redirect to Roblox join URL
+        if(placeId && jobId){
+            window.location.href = `https://www.roblox.com/games/${placeId}?gameInstanceId=${jobId}`;
+        } else {
+            document.write("Invalid link.");
+        }
+    </script>
+</body>
+</html>
